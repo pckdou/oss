@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-04T12:25:08.160Z",
+  "generated": "2026-10-04T12:39:34.731Z",
   "summary": {
     "deploysPerWeek": 0.6,
     "leadTimeH": 0.05,
     "cfr": 25,
-    "mttrH": null
+    "mttrH": 0.04666666666666667
   },
   "weekly": [
     {
@@ -12,7 +12,7 @@
       "deploys": 8,
       "cfr": 25,
       "leadTimeH": 0.05,
-      "mttrH": null
+      "mttrH": 0.04666666666666667
     }
   ]
 }
