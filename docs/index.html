@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8"><title>DORA Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3"></script>
+<style>
+  body{font-family:system-ui,sans-serif;margin:24px;background:#f6f8fa;color:#24292f}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+  .card{background:#fff;border:1px solid #d0d7de;border-radius:8px;padding:14px}
+  .card b{display:block;font-size:26px;margin-top:4px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .grid div{background:#fff;border:1px solid #d0d7de;border-radius:8px;padding:12px}
+</style>
+<h2>DORA Metrics (최근 90일)</h2>
+<div class="cards" id="cards"></div>
+<div class="grid">
+  <div><canvas id="c1"></canvas></div><div><canvas id="c2"></canvas></div>
+  <div><canvas id="c3"></canvas></div><div><canvas id="c4"></canvas></div>
+</div>
+<script>
+fetch("data/metrics.json").then(r=>r.json()).then(({summary:s,weekly:w})=>{
+  const f=(v,u)=>v==null?"–":(+v).toFixed(1)+u;
+  cards.innerHTML=[["Deployment Frequency",f(s.deploysPerWeek,"/주")],["Lead Time",f(s.leadTimeH,"h")],
+    ["Change Failure Rate",f(s.cfr,"%")],["MTTR",f(s.mttrH,"h")]]
+    .map(([t,v])=>`<div class="card">${t}<b>${v}</b></div>`).join("");
+  const L=w.map(x=>x.week);
+  const mk=(id,title,data,type,color)=>new Chart(document.getElementById(id),{type,
+    data:{labels:L,datasets:[{label:title,data,borderColor:color,backgroundColor:color+"99",spanGaps:true}]},
+    options:{animation:false,plugins:{title:{display:true,text:title}}}});
+  mk("c1","Deployment Frequency (회/주)",w.map(x=>x.deploys),"bar","#2da44e");
+  mk("c2","Lead Time (시간)",w.map(x=>x.leadTimeH),"line","#0969da");
+  mk("c3","Change Failure Rate (%)",w.map(x=>x.cfr),"line","#cf222e");
+  mk("c4","MTTR (시간)",w.map(x=>x.mttrH),"bar","#bf8700");
+});
+</script>

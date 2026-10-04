@@ -1,0 +1,41 @@
+name: DORA Metrics
+on:
+  schedule: [{ cron: "0 0 * * *" }]
+  workflow_dispatch:
+  deployment_status:
+
+permissions:
+  contents: write
+  deployments: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+
+      - name: Collect metrics
+        run: node scripts/dora.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOY_ENV: production
+
+      - name: Screenshot dashboard
+        run: |
+          npm i playwright --no-save
+          npx playwright install --with-deps chromium
+          python3 -m http.server 8080 -d docs &
+          sleep 2
+          node scripts/shot.mjs
+
+      - name: Commit
+        run: |
+          git config user.name "dora-bot"
+          git config user.email "dora-bot@users.noreply.github.com"
+          git add docs
+          git diff --staged --quiet || git commit -m "chore: update DORA metrics"
+          git push
