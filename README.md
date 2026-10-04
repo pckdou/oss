@@ -1,6 +1,6 @@
-# oss
+# 학기 프로젝트 제출 모음
 
-## DORA Metrics
-![DORA Dashboard](docs/dashboard.png)
-
-# test
+| 주차 | 주제 | 링크 |
+|---|---|---|
+| 1 | Git/GitHub 환경 구축 | (예정) |
+| 2 | DORA 지표 자동 수집 | [week02](week02/README.md) |
