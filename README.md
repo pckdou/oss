@@ -4,3 +4,4 @@
 |---|---|---|
 | 1 | Git/GitHub 환경 구축 | (예정) |
 | 2 | DORA 지표 자동 수집 | [week02](week02/README.md) |
+| 3 | 칸반 GitHub Project 및 스프린트 백로그 | [week03](week03/README.md) |
