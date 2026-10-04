@@ -17,8 +17,6 @@
 
 상태 컬럼: **Backlog → To Do → In Progress → Review → Done**
 
-![kanban](images/kanban.png)
-
 - Sprint 1 이슈 6개: To Do
 - Sprint 2 이슈 6개: Backlog
 - 스프린트별 뷰(Sprint 1, Sprint 2)와 자동화 Workflow 설정
