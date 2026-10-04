@@ -10,4 +10,4 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v4
-      - run: echo "deploying..."
+      - run: exit 1
