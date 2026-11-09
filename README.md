@@ -8,3 +8,4 @@
 | 4 | GitHub Flow 및 코드리뷰 협업 실습 | [week04](week04/README.md) |
 | 5 | 비동기 협업 체계 구축 | [week05](week05/README.md) |
 | 6 | 오픈소스 실습 및 Inner Source 계획 | [week06](week06/README.md) |
+| 7 | GitHub Actions 기반 기본 CI/CD 구축 | [week07](week07/README.md) |
