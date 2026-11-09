@@ -9,4 +9,4 @@
 | 5 | 비동기 협업 체계 구축 | [week05](week05/README.md) |
 | 6 | 오픈소스 실습 및 Inner Source 계획 | [week06](week06/README.md) |
 | 7 | GitHub Actions 기반 기본 CI/CD 구축 | [week07](week07/README.md) |
-| 8 | 워크플로우 실행 최적화 (재사용/캐싱/조건부) | [week08](https://github.com/pckdou/workflow) |
+| 8 | 워크플로우 실행 최적화 (재사용/캐싱/조건부) | [week08](week08/README.md) |
