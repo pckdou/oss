@@ -10,3 +10,4 @@
 | 6 | 오픈소스 실습 및 Inner Source 계획 | [week06](week06/README.md) |
 | 7 | GitHub Actions 기반 기본 CI/CD 구축 | [week07](week07/README.md) |
 | 8 | 워크플로우 실행 최적화 (재사용/캐싱/조건부) | [week08](week08/README.md) |
+| 9 | GitHub Packages 및 의존성 보안 자동화 | [week09](week09/README.md) |
