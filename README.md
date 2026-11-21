@@ -13,3 +13,4 @@
 | 9 | GitHub Packages 및 의존성 보안 자동화 | [week09](week09/README.md) |
 | 10 | 멀티 플랫폼 배포 자동화 (Vercel + GCP Cloud Run) | [week10](week10/README.md) |
 | 11 | Feature Flags 및 점진적 배포 | [week11](week11/README.md) |
+| 12 | Shift-Left 테스트 자동화 | [week12](week12/README.md) |
