@@ -11,3 +11,4 @@
 | 7 | GitHub Actions 기반 기본 CI/CD 구축 | [week07](week07/README.md) |
 | 8 | 워크플로우 실행 최적화 (재사용/캐싱/조건부) | [week08](week08/README.md) |
 | 9 | GitHub Packages 및 의존성 보안 자동화 | [week09](week09/README.md) |
+| 10 | 멀티 플랫폼 배포 자동화 (Vercel + GCP Cloud Run) | [week10](week10/README.md) |
