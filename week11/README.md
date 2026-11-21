@@ -136,4 +136,3 @@ $env:APP_ENV="production"; $env:FLAG_NEW_CHECKOUT="off"; npm start
 - 할당 불일치: **0건** (실행 4회 모두)
 - 할당 비율: 490 : 510 (목표 50:50)
 - 전환율은 가정값(control 10%, treatment 14%)에서 난수로 생성한 시뮬레이션 값이므로, 실제 효과 검증이 아니라 할당/이벤트 추적 파이프라인이 동작함을 검증한 결과입니다.
-- 상세 기록: [`logs/experiment-log.md`](logs/experiment-log.md)
